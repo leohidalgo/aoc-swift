@@ -1,5 +1,12 @@
 import Foundation
 
+public extension Collection where Element: Hashable {
+
+    var allSame: Bool {
+        Set(self).count == 1
+    }
+}
+
 public extension Collection where Element == DateInterval {
 
     var average: TimeInterval {
