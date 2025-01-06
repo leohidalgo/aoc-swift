@@ -14,6 +14,8 @@ let package = Package(
         .target(name: "AOC2024", dependencies: ["AOCCore"]),
         .target(name: "AOCCore"),
 
+        .testTarget(name: "AOC2024Tests", dependencies: ["AOC2024"]),
+
         .executableTarget(
             name: "AOC",
             dependencies: [
