@@ -36,4 +36,15 @@ struct AOC2024Tests {
         #expect(try sut.part1() == 2, "Part 1")
         #expect(try sut.part2() == 4, "Part 2")
     }
+
+    @Test
+    func day03() throws {
+        var sut = Day03()
+
+        sut.rawInput = "xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))"
+        #expect(try sut.part1() == 161, "Part 1")
+
+        sut.rawInput = "xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))"
+        #expect(try sut.part2() == 48, "Part 2")
+    }
 }
