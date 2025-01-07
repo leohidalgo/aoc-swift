@@ -37,17 +37,15 @@ struct Day03: Day {
             }
         }
 
-        var answer = 0
-        var isEnabled = true
-        for match in input().raw.matches(of: query) {
-            switch (match.output.0, isEnabled) {
-                case ("do()", _): isEnabled = true
-                case ("don't()", _): isEnabled = false
-                case (_, false): continue
-                default: answer += (match.output.1 ?? 0) * (match.output.2 ?? 0)
+        return input().raw.matches(of: query)
+            .reduce(into: (answer: 0, isEnabled: true)) { result, match in
+                switch (match.output.0, result.isEnabled) {
+                case ("do()", _): result.isEnabled = true
+                case ("don't()", _): result.isEnabled = false
+                case (_, false): return
+                default: result.answer += (match.output.1 ?? 0) * (match.output.2 ?? 0)
+                }
             }
-        }
-
-        return answer
+            .answer
     }
 }
