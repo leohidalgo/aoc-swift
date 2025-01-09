@@ -6,7 +6,8 @@ public struct AOC2024 {
     private static let days: [Int: any Day] = [
         1: Day01(),
         2: Day02(),
-        3: Day03()
+        3: Day03(),
+        4: Day04()
     ]
 }
 
