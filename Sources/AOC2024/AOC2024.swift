@@ -7,7 +7,8 @@ public struct AOC2024 {
         1: Day01(),
         2: Day02(),
         3: Day03(),
-        4: Day04()
+        4: Day04(),
+        5: Day05()
     ]
 }
 
