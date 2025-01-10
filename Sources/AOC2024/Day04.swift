@@ -11,12 +11,11 @@ struct Day04: Day {
         let target = Array("XMAS")
         let directions = [Direction.up, .down, .left, .right, .upLeft, .upRight, .downLeft, .downRight]
 
-        var answer = 0
-        for position in GridSequence(board) {
-            answer += directions.count { search(position, $0, 0, target, board) }
-        }
-
-        return answer
+        return GridSequence(board)
+            .map { position in
+                directions.count { search(position, $0, 0, target, board) }
+            }
+            .sum
     }
 
     func part2() throws -> Int {
@@ -28,15 +27,14 @@ struct Day04: Day {
             .upLeft: [((y: -2, x: 0), .downLeft), ((y: 0, x: -2), .upRight)]
         ]
 
-        var answer = 0
-        for position in GridSequence(board) {
-            answer += directions.count { key, value in
-                search(position, key, 0, target, board) &&
-                value.contains { search(position.offset($0.offset), $0.direction, 0, target, board) }
+        return GridSequence(board)
+            .map { position in
+                directions.count { key, value in
+                    search(position, key, 0, target, board) &&
+                    value.contains { search(position.offset($0.offset), $0.direction, 0, target, board) }
+                }
             }
-        }
-
-        return answer
+            .sum
     }
 
     private func search(_ position: Position, _ direction: Direction, _ targetIndex: Int, _ target: [Character], _ board: [[Character]]) -> Bool {
