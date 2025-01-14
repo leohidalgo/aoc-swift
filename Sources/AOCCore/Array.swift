@@ -20,4 +20,16 @@ public extension Array where Element: RandomAccessCollection, Element.Index == I
 
         return nil
     }
+
+    func findAll(element: Element.Element) -> Set<Position> {
+        var result: Set<Position> = []
+
+        for (y, row) in self.enumerated() {
+            for (x, item) in row.enumerated() where item == element {
+                result.insert(.init(y: y, x: x))
+            }
+        }
+
+        return result
+    }
 }
