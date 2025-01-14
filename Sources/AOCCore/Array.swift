@@ -11,7 +11,7 @@ public extension Array where Element: RandomAccessCollection, Element.Index == I
         return self[key.y][key.x]
     }
 
-    func find(element: Element.Element) -> Position? {
+    func findFirst(element: Element.Element) -> Position? {
         for (y, row) in self.enumerated() {
             if let x = row.firstIndex(of: element) {
                 return Position(y: y, x: x)
