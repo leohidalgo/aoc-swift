@@ -6,3 +6,10 @@ public extension Sequence where Element: AdditiveArithmetic {
         self.reduce(.zero, +)
     }
 }
+
+public extension Sequence where Iterator.Element: Hashable {
+
+    var unique: Set<Iterator.Element> {
+        Set(self)
+    }
+}
