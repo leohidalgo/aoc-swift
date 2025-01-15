@@ -136,6 +136,7 @@ struct AOC2024Tests {
         ......#...
         """
         #expect(try sut.part1() == 41, "Part 1")
+        #expect(try sut.part2() == 6, "Part 2")
     }
 
     @Test
