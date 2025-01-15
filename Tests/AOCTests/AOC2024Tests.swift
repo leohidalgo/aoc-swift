@@ -136,4 +136,13 @@ struct AOC2024Tests {
         #expect(try sut.part1() == 36, "Part 1")
         #expect(try sut.part2() == 81, "Part 2")
     }
+
+    @Test
+    func day11() throws {
+        var sut = Day11()
+
+        sut.rawInput = "125 17"
+        #expect(try sut.part1() == 55312, "Part 1")
+        #expect(try sut.part2() == 65601038650482, "Part 2")
+    }
 }
