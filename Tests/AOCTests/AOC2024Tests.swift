@@ -145,4 +145,40 @@ struct AOC2024Tests {
         #expect(try sut.part1() == 55312, "Part 1")
         #expect(try sut.part2() == 65601038650482, "Part 2")
     }
+
+    @Test
+    func day12() throws {
+        var sut = Day12()
+
+        sut.rawInput = """
+        AAAA
+        BBCD
+        BBCC
+        EEEC
+        """
+        #expect(try sut.part1() == 140, "Part 1")
+
+        sut.rawInput = """
+        OOOOO
+        OXOXO
+        OOOOO
+        OXOXO
+        OOOOO
+        """
+        #expect(try sut.part1() == 772, "Part 1")
+
+        sut.rawInput = """
+        RRRRIICCFF
+        RRRRIICCCF
+        VVRRRCCFFF
+        VVRCCCJFFF
+        VVVVCJJCFE
+        VVIVCCJJEE
+        VVIIICJJEE
+        MIIIIIJJEE
+        MIIISIJEEE
+        MMMISSJEEE
+        """
+        #expect(try sut.part1() == 1930, "Part 1")
+    }
 }
