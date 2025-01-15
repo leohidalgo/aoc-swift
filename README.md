@@ -21,7 +21,7 @@ swift test
 | 03 | [Mull It Over](https://adventofcode.com/2024/day/3)       | ⭐️ | ⭐️ | [Day 03](Sources/AOC2024/Day03.swift) |
 | 04 | [Ceres Search](https://adventofcode.com/2024/day/4)       | ⭐️ | ⭐️ | [Day 04](Sources/AOC2024/Day04.swift) |
 | 05 | [Print Queue](https://adventofcode.com/2024/day/5)        | ⭐️ | ⭐️ | [Day 05](Sources/AOC2024/Day05.swift) |
-| 06 | [Guard Gallivant](https://adventofcode.com/2024/day/6)    | ⭐️ |    | [Day 06](Sources/AOC2024/Day06.swift) |
+| 06 | [Guard Gallivant](https://adventofcode.com/2024/day/6)    | ⭐️ | ⭐️ | [Day 06](Sources/AOC2024/Day06.swift) |
 | 09 | [Disk Fragmenter](https://adventofcode.com/2024/day/9)    | ⭐️ |    | [Day 09](Sources/AOC2024/Day09.swift) |
 | 10 | [Hoof It](https://adventofcode.com/2024/day/10)           | ⭐️ | ⭐️ | [Day 10](Sources/AOC2024/Day10.swift) |
 | 11 | [Plutonian Pebbles](https://adventofcode.com/2024/day/11) | ⭐️ | ⭐️ | [Day 11](Sources/AOC2024/Day11.swift) |
