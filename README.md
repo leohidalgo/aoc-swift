@@ -23,3 +23,4 @@ swift test
 | 05 | [Print Queue](https://adventofcode.com/2024/day/5)        | ⭐️ | ⭐️ | [Day 05](Sources/AOC2024/Day05.swift) |
 | 10 | [Hoof It](https://adventofcode.com/2024/day/10)           | ⭐️ | ⭐️ | [Day 10](Sources/AOC2024/Day10.swift) |
 | 11 | [Plutonian Pebbles](https://adventofcode.com/2024/day/11) | ⭐️ | ⭐️ | [Day 11](Sources/AOC2024/Day11.swift) |
+| 12 | [Garden Groups](https://adventofcode.com/2024/day/12)     | ⭐️ |    | [Day 12](Sources/AOC2024/Day12.swift) |
