@@ -2,6 +2,10 @@ import Foundation
 
 public extension Int {
 
+    var digits: [Int] {
+        Array(String(self)).compactMap(Int.init)
+    }
+
     var isEven: Bool {
         self % 2 == 0
     }
