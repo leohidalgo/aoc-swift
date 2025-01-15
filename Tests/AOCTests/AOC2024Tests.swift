@@ -145,6 +145,7 @@ struct AOC2024Tests {
 
         sut.rawInput = "2333133121414131402"
         #expect(try sut.part1() == 1928, "Part 1")
+        #expect(try sut.part2() == 2858, "Part 2")
     }
 
     @Test
