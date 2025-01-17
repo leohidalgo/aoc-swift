@@ -5,6 +5,9 @@
 
 ## 🏃‍♂️ Run
 ```SHELL
+mkdir -p Inputs/Year-XXXX       // example: Year-2024
+cp DayXX-Input.txt dayxx.txt    // example: day01.txt
+
 swift run aoc --day XX --iterations 20
 ```
 
