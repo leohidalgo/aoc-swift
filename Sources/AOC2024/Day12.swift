@@ -2,7 +2,6 @@ import AOCCore
 import Foundation
 
 struct Day12: Day {
-
     let title = "Garden Groups"
     var rawInput: String?
 
@@ -12,13 +11,15 @@ struct Day12: Day {
         return GridSequence(board)
             .reduce(into: (path: Set<Position>(), answer: 0)) { result, position in
                 let oldCountPath = result.path.count
+
+                // swiftlint:disable:next force_unwrapping
                 result.answer += dfs(position, board[position]!, &result.path, board) * (result.path.count - oldCountPath)
             }
             .answer
     }
 
     func part2() throws -> Int {
-        return -1
+        -1
     }
 
     private func dfs(_ position: Position, _ target: Character, _ path: inout Set<Position>, _ board: [[Character]]) -> Int {

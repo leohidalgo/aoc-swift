@@ -2,20 +2,25 @@ import AOCCore
 import Foundation
 
 struct Day06: Day {
-
     let title = "Guard Gallivant"
     var rawInput: String?
 
     func part1() throws -> Int {
         let board = input().lines.map(\.characters)
-        let startPosition = board.findFirst(element: "^")!
+
+        guard
+            let startPosition = board.findFirst(element: "^")
+        else { return -1 }
 
         return patrol(startPosition, .up, board).count
     }
 
     func part2() throws -> Int {
         let board = input().lines.map(\.characters)
-        let startPosition = board.findFirst(element: "^")!
+
+        guard
+            let startPosition = board.findFirst(element: "^")
+        else { return -1 }
 
         return patrol(startPosition, .up, board)
             .count { isLoop(startPosition, .up, $0, board) }
@@ -61,7 +66,6 @@ struct Day06: Day {
 }
 
 private extension Direction {
-
     func turn() -> Direction {
         .init(y: self.x, x: -self.y)
     }

@@ -2,7 +2,6 @@ import AOCCore
 import Foundation
 
 struct Day01: Day {
-
     let title = "Historian Hysteria"
     var rawInput: String?
 

@@ -2,7 +2,6 @@ import AOCCore
 import Foundation
 
 struct Day11: Day {
-
     let title = "Plutonian Pebbles"
     var rawInput: String?
 
@@ -34,24 +33,25 @@ struct Day11: Day {
 }
 
 private extension Int {
-
     func blinked() -> [Int] {
-        if self == 0 { return [1] }
-        else if self.digits.count.isEven {
-            let separator = Int(pow(10, Double(self.digits.count / 2)))
+        guard
+            self != 0
+        else { return [1] }
 
-            let left = self / separator
-            let right = self - (left * separator)
+        guard
+            self.digits.count.isEven
+        else { return [self * 2024] }
 
-            return [left, right]
-        }
+        let separator = Int(pow(10, Double(self.digits.count / 2)))
 
-        return [self * 2024]
+        let left = self / separator
+        let right = self - (left * separator)
+
+        return [left, right]
     }
 }
 
 private extension Dictionary where Key == Int, Value == Int {
-
     mutating
     func blink() {
         self = self.keys.reduce(into: [:]) { result, item in

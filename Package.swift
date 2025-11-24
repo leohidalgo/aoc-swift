@@ -4,21 +4,27 @@ import PackageDescription
 
 let package = Package(
     name: "aoc",
-    platforms: [
-        .macOS(.v15)
-    ],
+    platforms: [.macOS(.v15)],
     products: [
-        .executable(name: "aoc", targets: ["AOC"])
+        .executable(
+            name: "aoc",
+            targets: ["AOC"]
+        )
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.6.2")
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.6.2"),
+        .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", from: "0.62.2")
     ],
     targets: [
-        .target(name: "AOC2024", dependencies: ["AOCCore"]),
+        .target(
+            name: "AOC2024",
+            dependencies: ["AOCCore"]
+        ),
         .target(name: "AOCCore"),
-
-        .testTarget(name: "AOC2024Tests", dependencies: ["AOC2024"]),
-
+        .testTarget(
+            name: "AOC2024Tests",
+            dependencies: ["AOC2024"]
+        ),
         .executableTarget(
             name: "AOC",
             dependencies: [

@@ -2,7 +2,6 @@ import AOCCore
 import Foundation
 
 struct Day04: Day {
-
     let title = "Ceres Search"
     var rawInput: String?
 

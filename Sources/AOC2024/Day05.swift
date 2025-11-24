@@ -2,17 +2,20 @@ import AOCCore
 import Foundation
 
 struct Day05: Day {
-
     let title = "Print Queue"
     var rawInput: String?
 
     func part1() throws -> Int {
-        let rules = input().sections[0].lines.map(\.integers)
+        let rules = input().sections[0]
+            .lines
+            .map(\.integers)
             .reduce(into: [:]) { result, value in
                 result[value[0], default: []].append(value[1])
             }
 
-        return input().sections[1].lines.map(\.integers)
+        return input().sections[1]
+            .lines
+            .map(\.integers)
             .filter { update in
                 zip(update, update.dropFirst()).allSatisfy { lhs, rhs in
                     isLower(lhs, rhs, rules)
@@ -23,12 +26,16 @@ struct Day05: Day {
     }
 
     func part2() throws -> Int {
-        let rules = input().sections[0].lines.map(\.integers)
+        let rules = input().sections[0]
+            .lines
+            .map(\.integers)
             .reduce(into: [:]) { result, value in
                 result[value[0], default: []].append(value[1])
             }
 
-        return input().sections[1].lines.map(\.integers)
+        return input().sections[1]
+            .lines
+            .map(\.integers)
             .filter { update in
                 !zip(update, update.dropFirst()).allSatisfy { lhs, rhs in
                     isLower(lhs, rhs, rules)

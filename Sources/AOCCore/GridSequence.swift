@@ -1,7 +1,6 @@
 import Foundation
 
 public struct GridSequence: Sequence, IteratorProtocol {
-
     private var y: Int
     private var x: Int
 
@@ -16,8 +15,7 @@ public struct GridSequence: Sequence, IteratorProtocol {
         self.x = rangeX.startIndex
     }
 
-    mutating
-    public func next() -> Point? {
+    public mutating func next() -> Point? {
         defer {
             x += 1
 

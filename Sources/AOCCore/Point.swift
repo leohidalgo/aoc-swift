@@ -4,7 +4,6 @@ public typealias Direction = Point
 public typealias Position = Point
 
 public struct Point: Sendable, Hashable {
-
     public let y: Int
     public let x: Int
 
@@ -17,7 +16,7 @@ public struct Point: Sendable, Hashable {
         Self(y: y + dy, x: x + dx)
     }
 
-    public func offset(_ point: Point) -> Self {
+    public func offset(_ point: Self) -> Self {
         offset(dy: point.y, dx: point.x)
     }
 
@@ -27,7 +26,6 @@ public struct Point: Sendable, Hashable {
 }
 
 public extension Point {
-
     static let up = Self(y: -1, x: 0)
     static let down = Self(y: 1, x: 0)
     static let left = Self(y: 0, x: -1)

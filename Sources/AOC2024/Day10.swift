@@ -2,7 +2,6 @@ import AOCCore
 import Foundation
 
 struct Day10: Day {
-
     let title = "Hoof It"
     var rawInput: String?
 
@@ -19,7 +18,8 @@ struct Day10: Day {
     func part2() throws -> Int {
         let board = input().lines.map { $0.characters.compactMap(Int.init) }
 
-        return board.findAll(element: 0)
+        return board
+            .findAll(element: 0)
             .map { dfs($0, 0, board) }
             .map(\.count)
             .sum

@@ -1,7 +1,6 @@
 import Foundation
 
 public struct Tuple<First: Hashable, Second: Hashable>: Hashable {
-
     public let first: First
     public let second: Second
 
