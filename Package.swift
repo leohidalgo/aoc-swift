@@ -16,19 +16,21 @@ let package = Package(
         .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", from: "0.62.2")
     ],
     targets: [
-        .target(
-            name: "AOC2024",
-            dependencies: ["AOCCore"]
-        ),
+        .target(name: "AOC2024", dependencies: ["AOCCore"]),
+        .target(name: "AOC2025", dependencies: ["AOCCore"]),
         .target(name: "AOCCore"),
         .testTarget(
-            name: "AOC2024Tests",
-            dependencies: ["AOC2024"]
+            name: "AOCTests",
+            dependencies: [
+                "AOC2024",
+                "AOC2025"
+            ]
         ),
         .executableTarget(
             name: "AOC",
             dependencies: [
                 "AOC2024",
+                "AOC2025",
                 "AOCCore",
                 .product(name: "ArgumentParser", package: "swift-argument-parser")
             ]

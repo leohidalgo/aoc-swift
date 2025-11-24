@@ -8,13 +8,19 @@
 mkdir -p Inputs/Year-XXXX       // example: Year-2024
 cp DayXX-Input.txt dayxx.txt    // example: day01.txt
 
-swift run aoc --day XX --iterations 20
+swift run aoc --year XXXX --day XX --iterations 20
+swift run aoc --day XX --iterations 20 // for latest year
 ```
 
 ## 👷 Tests
 ```SHELL
 swift test
 ```
+
+## 🧩 Solutions 2025
+| Day | Puzzle | Part 1 | Part 2 | Solution |
+|:--:|--|:--:|:--:|--|
+| 01 | ... | - | - | [Day 01](Sources/AOC2025/Day01.swift) |
 
 ## 🧩 Solutions 2024
 | Day | Puzzle | Part 1 | Part 2 | Solution |
