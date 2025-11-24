@@ -16,12 +16,14 @@ let package = Package(
         .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", from: "0.62.2")
     ],
     targets: [
+        .target(name: "AOC2023", dependencies: ["AOCCore"]),
         .target(name: "AOC2024", dependencies: ["AOCCore"]),
         .target(name: "AOC2025", dependencies: ["AOCCore"]),
         .target(name: "AOCCore"),
         .testTarget(
             name: "AOCTests",
             dependencies: [
+                "AOC2023",
                 "AOC2024",
                 "AOC2025"
             ]
@@ -29,6 +31,7 @@ let package = Package(
         .executableTarget(
             name: "AOC",
             dependencies: [
+                "AOC2023",
                 "AOC2024",
                 "AOC2025",
                 "AOCCore",

@@ -1,3 +1,4 @@
+import AOC2023
 import AOC2024
 import AOC2025
 import AOCCore
@@ -17,7 +18,7 @@ struct AOC: ParsableCommand {
 
     func validate() throws {
         guard
-            (2024...2025).contains(year)
+            (2023...2025).contains(year)
         else { throw ValidationError("Invalid year \(year)") }
 
         guard
@@ -31,6 +32,7 @@ struct AOC: ParsableCommand {
 
     func run() throws {
         let years: [Int: any Year.Type] = [
+            2023: AOC2023.self,
             2024: AOC2024.self,
             2025: AOC2025.self
         ]
