@@ -37,3 +37,8 @@ swift test
 | 11 | [Plutonian Pebbles](https://adventofcode.com/2024/day/11) | ⭐️ | ⭐️ | [Day 11](Sources/AOC2024/Day11.swift) |
 | 12 | [Garden Groups](https://adventofcode.com/2024/day/12)     | ⭐️ |    | [Day 12](Sources/AOC2024/Day12.swift) |
 | 16 | [Reindeer Maze](https://adventofcode.com/2024/day/16)     | ⭐️ |    | [Day 16](Sources/AOC2024/Day16.swift) |
+
+## 🧩 Solutions 2023
+| Day | Puzzle | Part 1 | Part 2 | Solution |
+|:--:|--|:--:|:--:|--|
+| 01 | [Trebuchet?!](https://adventofcode.com/2023/day/1) | ⭐️ |   | [Day 01](Sources/AOC2023/Day01.swift) |
