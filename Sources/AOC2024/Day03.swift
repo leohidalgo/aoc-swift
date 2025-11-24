@@ -3,7 +3,6 @@ import Foundation
 import RegexBuilder
 
 struct Day03: Day {
-
     let title = "Mull It Over"
     var rawInput: String?
 

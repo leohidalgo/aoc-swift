@@ -4,7 +4,6 @@ on:
     push:
         branches:
           - develop
-
     pull_request:
         branches:
           - develop
@@ -20,8 +19,8 @@ jobs:
           - name: Checkout
             uses: actions/checkout@v4
           - name: Versions
-            run: |
-                swift --version
+            run: swift --version
+          - name: Lint
+            run: swift package plugin --allow-writing-to-package-directory swiftlint
           - name: Swift Test
-            run: |
-                swift test
+            run: swift test

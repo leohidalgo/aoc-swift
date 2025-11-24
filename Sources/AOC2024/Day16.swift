@@ -2,7 +2,6 @@ import AOCCore
 import Foundation
 
 struct Day16: Day {
-
     let title = "Reindeer Maze"
     var rawInput: String?
 
@@ -33,12 +32,12 @@ struct Day16: Day {
 
             visited.insert(currentPosition)
 
-            [Direction.up, .down, .left, .right].forEach {
-                let newPosition = currentPosition.offset($0)
+            [Direction.up, .down, .left, .right].forEach { position in
+                let newPosition = currentPosition.offset(position)
 
                 if !visited.contains(newPosition) {
-                    let additionalCost = currentDirection == $0 ? 0 : 1000
-                    queue.append((newPosition, $0), currentCost + additionalCost + 1)
+                    let additionalCost = currentDirection == position ? 0 : 1000
+                    queue.append((newPosition, position), currentCost + additionalCost + 1)
                 }
             }
         }
@@ -47,6 +46,6 @@ struct Day16: Day {
     }
 
     func part2() throws -> Int {
-        return -1
+        -1
     }
 }

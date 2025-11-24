@@ -2,7 +2,6 @@ import AOCCore
 import Foundation
 
 struct Day07: Day {
-
     let title = "Bridge Repair"
     var rawInput: String?
 
@@ -10,8 +9,8 @@ struct Day07: Day {
         let equations = input().lines.map(\.integers)
 
         let operators = [
-            { (a: Int, b: Int) -> Int in return a + b },
-            { (a: Int, b: Int) -> Int in return a * b }
+            { (a: Int, b: Int) -> Int in a + b },
+            { (a: Int, b: Int) -> Int in a * b }
         ]
 
         return equations
@@ -24,9 +23,9 @@ struct Day07: Day {
         let equations = input().lines.map(\.integers)
 
         let operators = [
-            { (a: Int, b: Int) -> Int in return a + b },
-            { (a: Int, b: Int) -> Int in return a * b },
-            { (a: Int, b: Int) -> Int in return Int("\(a)\(b)")! }
+            { (a: Int, b: Int) -> Int in a + b },
+            { (a: Int, b: Int) -> Int in a * b },
+            { (a: Int, b: Int) -> Int in Int("\(a)\(b)")! } // swiftlint:disable:this force_unwrapping
         ]
 
         return equations

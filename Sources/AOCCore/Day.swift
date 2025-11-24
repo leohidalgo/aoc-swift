@@ -1,7 +1,6 @@
 import Foundation
 
 public protocol Day: Sendable {
-
     associatedtype Part1: CustomStringConvertible = Int
     associatedtype Part2: CustomStringConvertible = Int
 
@@ -13,7 +12,6 @@ public protocol Day: Sendable {
 }
 
 public extension Day {
-
     func input(filePath: StaticString = #filePath) -> Input {
         guard
             let rawInput

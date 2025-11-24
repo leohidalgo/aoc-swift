@@ -1,10 +1,8 @@
-import AOC2024
 import Testing
 
 @testable import AOC2024
 
 struct AOC2024Tests {
-
     @Test
     func day01() throws {
         var sut = Day01()
@@ -191,7 +189,7 @@ struct AOC2024Tests {
 
         sut.rawInput = "125 17"
         #expect(try sut.part1() == 55312, "Part 1")
-        #expect(try sut.part2() == 65601038650482, "Part 2")
+        #expect(try sut.part2() == 65_601_038_650_482, "Part 2")
     }
 
     @Test

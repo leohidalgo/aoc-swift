@@ -2,7 +2,6 @@ import AOCCore
 import Foundation
 
 struct Day09: Day {
-
     let title = "Disk Fragmenter"
     var rawInput: String?
 
@@ -59,7 +58,7 @@ struct Day09: Day {
     private func makeDiskPart2(_ diskMap: [Int]) -> (files: [Int: Block], free: [Block]) {
         let (files, free, _, _) = diskMap
             .enumerated()
-            .reduce(into: (files: Dictionary<Int, Block>(), free: Array<Block>(), id: 0, index: 0)) { result, item in
+            .reduce(into: (files: [Int: Block](), free: [Block](), id: 0, index: 0)) { result, item in
                 if item.offset.isEven {
                     result.files[result.id] = (result.index, item.element)
                     result.id += 1
@@ -77,30 +76,30 @@ struct Day09: Day {
 private typealias Block = (index: Int, size: Int)
 
 private enum Disk: CustomDebugStringConvertible {
-
     case file(id: Int)
     case free
 
     var fileId: Int? {
-        if case let .file(id) = self { id }
-        else { nil }
+        if case let .file(id) = self {
+            id
+        } else { nil }
     }
 
     var isFree: Bool {
-        if case .free = self { true }
-        else { false }
+        if case .free = self {
+            true
+        } else { false }
     }
 
     var debugDescription: String {
         switch self {
-            case let .file(id): "\(id)"
-            case .free: "."
+        case let .file(id): "\(id)"
+        case .free: "."
         }
     }
 }
 
 private extension Dictionary where Key == Int, Value == Block {
-
     func checksum() -> Int {
         self
             .map {
@@ -114,7 +113,6 @@ private extension Dictionary where Key == Int, Value == Block {
 }
 
 private extension Collection where Element == Disk {
-
     func checksum() -> Int {
         self
             .compactMap(\.fileId)
