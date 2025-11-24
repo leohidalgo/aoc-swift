@@ -1,10 +1,13 @@
 import AOC2024
+import AOC2025
 import AOCCore
 import ArgumentParser
 import Foundation
 
 @main
 struct AOC: ParsableCommand {
+    @Option
+    var year: Int = 2025
 
     @Option
     var day: Int
@@ -13,6 +16,10 @@ struct AOC: ParsableCommand {
     var iterations = 1
 
     func validate() throws {
+        guard
+            (2024...2025).contains(year)
+        else { throw ValidationError("Invalid year \(year)") }
+
         guard
             (1...25).contains(day)
         else { throw ValidationError("Invalid day \(day)") }
@@ -23,9 +30,14 @@ struct AOC: ParsableCommand {
     }
 
     func run() throws {
+        let years: [Int: any Year.Type] = [
+            2024: AOC2024.self,
+            2025: AOC2025.self
+        ]
+
         guard
-            let puzzle = AOC2024.day(day)
-        else { throw CleanExit.message("Day not yet solved") }
+            let puzzle = years[year]?.day(day)
+        else { throw CleanExit.message("Day \(day) not solved yet for year \(year)") }
 
         var measures: [DateInterval] = []
         var p1: CustomStringConvertible = ""
