@@ -3,7 +3,8 @@ import Foundation
 
 public enum AOC2023 {
     private static let days: [Int: any Day] = [
-        1: Day01()
+        1: Day01(),
+        2: Day02()
     ]
 }
 

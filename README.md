@@ -41,4 +41,5 @@ swift test
 ## 🧩 Solutions 2023
 | Day | Puzzle | Part 1 | Part 2 | Solution |
 |:--:|--|:--:|:--:|--|
-| 01 | [Trebuchet?!](https://adventofcode.com/2023/day/1) | ⭐️ |   | [Day 01](Sources/AOC2023/Day01.swift) |
+| 01 | [Trebuchet?!](https://adventofcode.com/2023/day/1)    | ⭐️ | ⭐️ | [Day 01](Sources/AOC2023/Day01.swift) |
+| 02 | [Cube Conundrum](https://adventofcode.com/2023/day/2) | ⭐ |    | [Day 02](Sources/AOC2023/Day02.swift) |
