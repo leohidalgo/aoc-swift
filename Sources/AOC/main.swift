@@ -41,21 +41,29 @@ struct AOC: ParsableCommand {
             let puzzle = years[year]?.day(day)
         else { throw CleanExit.message("Day \(day) not solved yet for year \(year)") }
 
-        var measures: [DateInterval] = []
+        var measuresPart1: [DateInterval] = []
+        var measuresPart2: [DateInterval] = []
         var p1: CustomStringConvertible = ""
         var p2: CustomStringConvertible = ""
 
         for _ in 0..<iterations {
-            let t1 = Date()
-            (p1, p2) = try puzzle.run()
-            let t2 = Date()
+            try {
+                let t1 = Date()
+                p1 = try puzzle.part1()
+                let t2 = Date()
+                measuresPart1.append(DateInterval(start: t1, end: t2))
+            }()
 
-            measures.append(DateInterval(start: t1, end: t2))
+            try {
+                let t1 = Date()
+                p2 = try puzzle.part2()
+                let t2 = Date()
+                measuresPart2.append(DateInterval(start: t1, end: t2))
+            }()
         }
 
         print("Day \(day): \(puzzle.title)")
-        print("Part 1: \(p1)")
-        print("Part 2: \(p2)")
-        print("Execution time \(String(format: "%.3f", measures.average))s - \(iterations) iterations.")
+        print("Part 1: \(p1) (\(String(format: "%.3f", measuresPart1.average))s - \(iterations) iterations)")
+        print("Part 2: \(p2) (\(String(format: "%.3f", measuresPart2.average))s - \(iterations) iterations)")
     }
 }
