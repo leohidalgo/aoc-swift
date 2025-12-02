@@ -21,6 +21,6 @@ jobs:
           - name: Versions
             run: swift --version
           - name: Lint
-            run: swift package plugin --allow-writing-to-package-directory swiftlint
+            run: swift package plugin --allow-writing-to-package-directory swiftlint --strict
           - name: Swift Test
             run: swift test

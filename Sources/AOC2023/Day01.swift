@@ -11,8 +11,8 @@ struct Day01: Day {
 
         return lines
             .map { line in
-                let left = line.first(where: { $0.isNumber }).flatMap(Int.init) ?? 0
-                let right = line.last(where: { $0.isNumber }).flatMap(Int.init) ?? 0
+                let left = line.first(where: \.isNumber).flatMap(Int.init) ?? 0
+                let right = line.last(where: \.isNumber).flatMap(Int.init) ?? 0
 
                 return left * 10 + right
             }
@@ -34,7 +34,7 @@ struct Day01: Day {
                 line.raw
                     .matches(of: query)
                     .compactMap { $0.output.1 ?? $0.output.2 }
-                    .flatMap { $0.digits }
+                    .flatMap(\.digits)
             }
             .map { line in
                 let left = line.first ?? 0

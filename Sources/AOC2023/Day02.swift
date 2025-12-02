@@ -20,11 +20,11 @@ struct Day02: Day {
                     }
             }
             .enumerated()
-            .reduce(into: 0, { result, item in
+            .reduce(into: 0) { result, item in
                 if item.element {
                     result += item.offset + 1
                 }
-            })
+            }
     }
 
     func part2() throws -> Int {
@@ -65,9 +65,9 @@ private extension Line {
             .map { group in
                 group
                 .matches(of: query)
-                .reduce(into: [:], { result, element in
+                .reduce(into: [:]) { result, element in
                     result[element.output.2, default: 0] += element.output.1
-                })
+                }
             }
     }
 }
