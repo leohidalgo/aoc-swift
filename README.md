@@ -20,7 +20,7 @@ swift test
 ## 🧩 Solutions 2025
 | Day | Puzzle | Part 1 | Part 2 | Solution |
 |:--:|--|:--:|:--:|--|
-| 01 | ... | - | - | [Day 01](Sources/AOC2025/Day01.swift) |
+| 01 | [Secret Entrance](https://adventofcode.com/2025/day/1) | ⭐️ | ⭐️ | [Day 01](Sources/AOC2025/Day01.swift) |
 
 ## 🧩 Solutions 2024
 | Day | Puzzle | Part 1 | Part 2 | Solution |
