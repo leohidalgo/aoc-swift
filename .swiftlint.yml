@@ -55,10 +55,12 @@ identifier_name:
       - dy
       - i
       - id
+      - n
       - p1
       - p2
       - t1
       - t2
+      - to
       - up
       - x
       - y

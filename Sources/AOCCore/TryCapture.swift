@@ -24,7 +24,7 @@ public extension TryCapture where Output == (Substring, Int) {
                 "eight"
                 "nine"
             }
-        } transform: {
+        } transform: { key in
             let numberWords: [Substring: Int] = [
                 "zero": 0,
                 "one": 1,
@@ -38,7 +38,7 @@ public extension TryCapture where Output == (Substring, Int) {
                 "nine": 9
             ]
 
-            return numberWords[$0]
+            return numberWords[key]
         }
     }
 }
