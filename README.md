@@ -21,6 +21,7 @@ swift test
 | Day | Puzzle | Part 1 | Part 2 | Solution |
 |:--:|--|:--:|:--:|--|
 | 01 | [Secret Entrance](https://adventofcode.com/2025/day/1) | ⭐️ | ⭐️ | [Day 01](Sources/AOC2025/Day01.swift) |
+| 02 | [Gift Shop](https://adventofcode.com/2025/day/2) | ⭐️ | ⭐️ | [Day 02](Sources/AOC2025/Day02.swift) |
 
 ## 🧩 Solutions 2024
 | Day | Puzzle | Part 1 | Part 2 | Solution |
