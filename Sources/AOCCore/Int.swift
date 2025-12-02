@@ -1,6 +1,10 @@
 import Foundation
 
 public extension Int {
+    var countOfDigits: Int {
+        Int(log10(Double(self))) + 1
+    }
+
     var digits: [Int] {
         Array(String(self)).compactMap(Int.init)
     }
