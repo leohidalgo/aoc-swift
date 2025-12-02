@@ -19,8 +19,4 @@ public extension Day {
 
         return Input(rawInput)
     }
-
-    func run() throws -> (Part1, Part2) {
-        (try part1(), try part2())
-    }
 }
