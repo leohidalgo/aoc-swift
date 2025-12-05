@@ -35,4 +35,17 @@ struct AOC2025Tests {
         #expect(try sut.part1() == 1_227_775_554, "Part 1")
         #expect(try sut.part2() == 4_174_379_265, "Part 2")
     }
+
+    @Test
+    func day03() throws {
+        var sut = Day03()
+        sut.rawInput = """
+        987654321111111
+        811111111111119
+        234234234234278
+        818181911112111
+        """
+
+        #expect(try sut.part1() == 357, "Part 1")
+    }
 }
