@@ -23,6 +23,7 @@ swift test
 | 01 | [Secret Entrance](https://adventofcode.com/2025/day/1) | ⭐️ | ⭐️ | [Day 01](Sources/AOC2025/Day01.swift) |
 | 02 | [Gift Shop](https://adventofcode.com/2025/day/2) | ⭐️ | ⭐️ | [Day 02](Sources/AOC2025/Day02.swift) |
 | 03 | [Lobby](https://adventofcode.com/2025/day/3) | ⭐️ |   | [Day 03](Sources/AOC2025/Day03.swift) |
+| 05 | [Cafeteria](https://adventofcode.com/2025/day/5) | ⭐️ |   | [Day 05](Sources/AOC2025/Day05.swift) |
 
 ## 🧩 Solutions 2024
 | Day | Puzzle | Part 1 | Part 2 | Solution |
