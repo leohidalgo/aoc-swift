@@ -67,5 +67,6 @@ struct AOC2025Tests {
         """
 
         #expect(try sut.part1() == 3, "Part 1")
+        #expect(try sut.part2() == 14, "Part 2")
     }
 }
