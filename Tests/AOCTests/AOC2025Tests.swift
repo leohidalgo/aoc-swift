@@ -50,6 +50,25 @@ struct AOC2025Tests {
     }
 
     @Test
+    func day04() throws {
+        var sut = Day04()
+        sut.rawInput = """
+        ..@@.@@@@.
+        @@@.@.@.@@
+        @@@@@.@.@@
+        @.@@@@..@.
+        @@.@@@@.@@
+        .@@@@@@@.@
+        .@.@.@.@@@
+        @.@@@.@@@@
+        .@@@@@@@@.
+        @.@.@@@.@.
+        """
+
+        #expect(try sut.part1() == 13, "Part 1")
+    }
+
+    @Test
     func day05() throws {
         var sut = Day05()
         sut.rawInput = """
