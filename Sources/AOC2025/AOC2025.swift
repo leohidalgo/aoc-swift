@@ -7,7 +7,8 @@ public enum AOC2025 {
         2: Day02(),
         3: Day03(),
         4: Day04(),
-        5: Day05()
+        5: Day05(),
+        6: Day06()
     ]
 }
 
