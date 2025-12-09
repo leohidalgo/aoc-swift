@@ -2,6 +2,7 @@ import Foundation
 
 public final class Input: StringInput {
     public lazy var characters: [Character] = { Array(raw) }()
+    public lazy var board: [[String]] = { lines.map { $0.raw.components(separatedBy: .aocSeparator).map { String($0) } } }()
     public lazy var integers: [Int] = { raw.components(separatedBy: .aocSeparator).compactMap(Int.init) }()
     public lazy var lines: [Line] = { raw.components(separatedBy: .newlines).map(Line.init) }()
     public lazy var sections: [Input] = { raw.components(separatedBy: "\n\n").map(Input.init) }()
