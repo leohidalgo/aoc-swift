@@ -15,3 +15,18 @@ public extension Collection where Element == DateInterval {
         return totalDuration / Double(count)
     }
 }
+
+public extension Collection where Element: RandomAccessCollection {
+    var columns: [[Element.Element]] {
+        guard
+            let firstRow = self.first
+        else { return [] }
+
+        return (0..<firstRow.count)
+            .map { column in
+                self.map { row in
+                    row[row.index(row.startIndex, offsetBy: column)]
+                }
+            }
+    }
+}
