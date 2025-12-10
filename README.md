@@ -25,7 +25,7 @@ swift test
 | 03 | [Lobby](https://adventofcode.com/2025/day/3)               | ⭐️ |    | [Day 03](Sources/AOC2025/Day03.swift) |
 | 04 | [Printing Department](https://adventofcode.com/2025/day/4) | ⭐️ |    | [Day 04](Sources/AOC2025/Day04.swift) |
 | 05 | [Cafeteria](https://adventofcode.com/2025/day/5)           | ⭐️ | ⭐️ | [Day 05](Sources/AOC2025/Day05.swift) |
-| 06 | [Trash Compactor](https://adventofcode.com/2025/day/6)     | ⭐️ |    | [Day 06](Sources/AOC2025/Day06.swift) |
+| 06 | [Trash Compactor](https://adventofcode.com/2025/day/6)     | ⭐️ | ⭐️ | [Day 06](Sources/AOC2025/Day06.swift) |
 
 ## 🧩 Solutions 2024
 | Day | Puzzle | Part 1 | Part 2 | Solution |
