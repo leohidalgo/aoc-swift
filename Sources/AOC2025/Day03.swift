@@ -38,6 +38,39 @@ struct Day03: Day {
     }
 
     func part2() throws -> Int {
-        -1
+        input().lines
+            .map { $0.characters.compactMap(Int.init) }
+            .map { line in
+                var digits = line
+                    .enumerated()
+                    .suffix(12)
+                    .map { (value: $0.element, index: $0.offset) }
+
+                digits = digits
+                    .enumerated()
+                    .reduce(into: []) { acc, element in
+                        let (x, digit) = element
+
+                        let upperBound = digit.index
+                        let lowerBound = x > 0
+                            ? acc[x - 1].index + 1
+                            : 0
+
+                        let best = (lowerBound..<upperBound)
+                            .reversed()
+                            .reduce(digit) { current, index in
+                                line[index] >= current.value
+                                    ? (line[index], index)
+                                    : current
+                            }
+
+                        acc.append(best)
+                    }
+
+                return digits
+                    .map(\.value)
+                    .reduce(0) { $0 * 10 + $1 }
+            }
+            .sum
     }
 }

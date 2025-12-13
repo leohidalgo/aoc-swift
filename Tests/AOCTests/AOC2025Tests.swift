@@ -47,6 +47,7 @@ struct AOC2025Tests {
         """
 
         #expect(try sut.part1() == 357, "Part 1")
+        #expect(try sut.part2() == 3_121_910_778_619, "Part 2")
     }
 
     @Test
